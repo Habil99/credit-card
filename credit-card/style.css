@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#container {
+    width: 90%;
+    max-width: 550px;
+    min-height: 115vh;
+    margin: 0 auto;
+    box-shadow: 10px 10px 25px rgba(0,0,0,0.3),
+                -10px -10px 25px rgba(97, 12, 233, 0.2);
+}
+
+.card {
+    width: 80%;
+    max-width: 400px;
+    height: 250px;
+    background: linear-gradient(160deg, rgb(143, 203, 223),rgb(165, 2, 165));
+    margin: 20px auto;
+    border-radius: 15px;
+    padding: 10px;
+    position: relative;
+    color: white;
+    transition: all 2s;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+
+.card #chip {
+    width: 50px;
+    height: 50px;
+}
+
+.card #mastercard {
+    width: 70px;
+    height: 60px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.card #visacard {
+    width: 70px;
+    height: 60px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#card_number {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-weight: bolder;
+}
+
+#card_number_input.error {
+    border: 1px solid rgb(245, 29, 29);
+}
+
+.card .owner {
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.owner p:not(.title) {
+    font-weight: bolder !important;
+    font-size: 16px;
+}
+
+.title {
+    font-weight: 100 !important;
+    font-size: 14px;
+}
+
+.card .expires {
+    width: 130px;
+    height: 50px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.expires p:not(.title) {
+    font-weight: bolder !important;
+}
+
+.form {
+    width: 90%;
+    max-height: 500px;
+    margin: 60px auto 0;
+}
+
+.form label {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(36, 35, 35);
+}
+
+.form input {
+    display: block;
+    width: 100%;
+    padding: .2rem .5rem;
+    height: 50px;
+    outline: none;
+    border: none;
+    border: 1px solid rgb(177, 174, 174);
+    border-radius: 5px;
+    margin-top: 12px;
+    margin-bottom: 35px;
+    font-size: 16px;
+    font-weight: bolder;
+    color: rgb(95, 95, 95);
+}
+
+.form input:hover {
+    border: 1px solid green;
+}
+
+.form input:focus {
+    border: 1px solid green;
+}
+
+.form .date {
+    width: 100%;
+    display: flex;
+}
+
+.form .date .exp-date {
+    width: 330px;
+}
+
+.form .date .cvv {
+    width: 160px;
+}
+
+.form .date .exp-date label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form .date .exp-date select {
+    width: 140px;
+    height: 50px;
+    padding: .5rem 1.2rem;
+    border: none;
+    outline: none;
+    border-bottom: 4px solid rgb(177, 174, 174);
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat transparent;
+    background-position: right;
+    background-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(90, 90, 90);
+    cursor: pointer;
+}
+
+.form .date .exp-date select:hover{
+    border-bottom: 4px solid green;
+}
+
+.cvv label {
+    margin-bottom: 10px;
+}
+
+.cvv input {
+    width: 100%;
+}
+
+input[type="submit"] {
+    outline: none;
+    border: none;
+    background: rgb(9, 144, 197);
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: rgb(6, 152, 209);
+    outline: none;
+    border: none;
+}

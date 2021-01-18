@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img id="chip" src="chip.png" />
+            <img id="mastercard" src="mastercard.png" />
+            <img style="display: none" id="visacard" src="visacard.png" />
+
+            <p id="card_number"></p>
+
+            <div class="owner">
+              <p class="title">Card Owner</p>
+              <p id="owner_name"></p>
+              <p id="name">Name</p>
+            </div>
+
+            <div class="expires">
+              <p class="title">Expires</p>
+              <p><span id="m"></span> <span id="exp_date"></span></p>
+              <p id="my">MM/YY</p>
+            </div>
+          </div>
+          <div class="card-back">
+            <div class="black-stripe"></div>
+            <div class="cvv"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form">
+        <label for="number">Card Number</label>
+        <input
+          type="text"
+          id="card_number_input"
+          maxlength="16"
+          placeholder="1234 5678 9012 3456"
+          onkeypress="return (event.charCode !=8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57))"
+        />
+        <label for="owner">Card Owner</label>
+        <input type="text" id="card_owner_input" maxlength="23" />
+        <div class="date">
+          <div class="exp-date">
+            <label for="month">Expiration Date</label>
+            <select name="month" id="month">
+              <option disabled selected>Month</option>
+              <option value="01">1</option>
+              <option value="02">2</option>
+              <option value="03">3</option>
+              <option value="04">4</option>
+              <option value="05">5</option>
+              <option value="06">6</option>
+              <option value="07">7</option>
+              <option value="08">8</option>
+              <option value="09">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+            <select name="year" id="year">
+              <option value="MM/YY" disabled selected>Year</option>
+              <option value="20">2020</option>
+              <option value="21">2021</option>
+              <option value="22">2022</option>
+              <option value="23">2023</option>
+              <option value="24">2024</option>
+              <option value="25">2025</option>
+              <option value="26">2026</option>
+              <option value="27">2027</option>
+              <option value="28">2028</option>
+              <option value="29">2029</option>
+              <option value="30">2030</option>
+              <option value="31">2031</option>
+            </select>
+          </div>
+          <div class="cvv">
+            <label for="cvv">CVV</label>
+            <input type="text" />
+          </div>
+        </div>
+        <input type="submit" id="btn" />
+      </div>
+    </div>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>
